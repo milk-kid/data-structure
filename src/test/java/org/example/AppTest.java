@@ -15,7 +15,7 @@ public class AppTest {
     public void test2(){
         LinkedListTest listTest = new LinkedListTest();
 
-        listTest.main(new String[]{"",""});
+        listTest.main(new String[]{"","",""});
         System.out.println("test run pass");
     }
 }
