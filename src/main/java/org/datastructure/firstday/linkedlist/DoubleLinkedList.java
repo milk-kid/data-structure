@@ -2,7 +2,7 @@ package org.datastructure.firstday.linkedlist;
 
 class DoubleLinkedList implements LinkedList {
     private HeroNode2 head = new HeroNode2(1, "", "");
-
+//aisldjflskdfj
     @Override
     public HeroNode2 getHead() {
         return head;
