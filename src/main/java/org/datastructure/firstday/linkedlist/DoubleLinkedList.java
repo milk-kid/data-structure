@@ -2,7 +2,7 @@ package org.datastructure.firstday.linkedlist;
 
 class DoubleLinkedList implements LinkedList {
     private HeroNode2 head = new HeroNode2(1, "", "");
-//aisldjflskdfj
+
     @Override
     public HeroNode2 getHead() {
         return head;
@@ -64,7 +64,10 @@ class DoubleLinkedList implements LinkedList {
 
         if (flag) {
             temp.pre.next = temp.next;
-            temp.next.pre = temp.pre;
+            //这里如果temp如果是最后一个节点，那么temp.next就会报空指针异常
+            if (temp.next != null) {
+                temp.next.pre = temp.pre;
+            }
         } else {
             System.out.println("该英雄不存在！");
         }
