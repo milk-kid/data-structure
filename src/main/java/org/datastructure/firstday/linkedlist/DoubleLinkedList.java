@@ -10,14 +10,15 @@ class DoubleLinkedList implements LinkedList {
 
     @Override
     public void addList(HeroNode2 newHero) {
-        HeroNode2 curr = this.head;
+        HeroNode2 temp = this.head.next;
         while (true) {
-            if (curr == null) {
+            if (temp == null) {
                 break;
             }
-            curr = curr.next;
+            temp = temp.next;
         }
-        curr.next = newHero;
+        temp.next = newHero;
+        newHero.pre = temp;
     }
 
     @Override
