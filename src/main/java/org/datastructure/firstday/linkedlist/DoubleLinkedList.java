@@ -1,14 +1,12 @@
 package org.datastructure.firstday.linkedlist;
 
-class DoubleLinkedList implements LinkedList {
+class DoubleLinkedList {
     private HeroNode2 head = new HeroNode2(1, "", "");
 
-    @Override
     public HeroNode2 getHead() {
         return head;
     }
 
-    @Override
     public void addList(HeroNode2 newHero) {
         HeroNode2 temp = this.head.next;
         while (true) {
@@ -21,7 +19,6 @@ class DoubleLinkedList implements LinkedList {
         newHero.pre = temp;
     }
 
-    @Override
     public void addByOrder(HeroNode2 hero) {
         HeroNode2 temp = head;
         boolean flag = false;
@@ -46,7 +43,6 @@ class DoubleLinkedList implements LinkedList {
         }
     }
 
-    @Override
     public void deleteList(int no) {
         HeroNode2 temp = head;
         if (temp.next == null) return;
@@ -74,7 +70,6 @@ class DoubleLinkedList implements LinkedList {
         }
     }
 
-    @Override
     public void editList(HeroNode newHero) {
 
         if (head.next == null) return;
@@ -99,7 +94,6 @@ class DoubleLinkedList implements LinkedList {
         }
     }
 
-    @Override
     public void showList() {
         if (head.next == null) return;
         HeroNode2 temp = head.next;
@@ -112,7 +106,6 @@ class DoubleLinkedList implements LinkedList {
         }
     }
 
-    @Override
     public int listLength(HeroNode2 head) {
         if (head.next == null) return 0;
         HeroNode2 temp = head;
@@ -127,8 +120,7 @@ class DoubleLinkedList implements LinkedList {
         return count;
     }
 
-    @Override
-    public HeroNode2 getHeroByLast(LinkedList list, int lastIndex) {
+    public HeroNode2 getHeroByLast(DoubleLinkedList list, int lastIndex) {
         if (list.getHead().next == null) {
             return null;
         }
