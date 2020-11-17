@@ -12,7 +12,7 @@ public class Josegh {
 
     public static void main(String[] args) {
         CircleSingleLinkedList circleSingleLinkedList = new CircleSingleLinkedList();
-        circleSingleLinkedList.addBody(5);
+        circleSingleLinkedList.addBoy(5);
         circleSingleLinkedList.showBoy();
         circleSingleLinkedList.countBoy(1,2,5);
     }
@@ -22,7 +22,7 @@ class CircleSingleLinkedList {
 
     private Boy first = null;
 
-    public void addBody(int no) {
+    public void addBoy(int no) {
         if (no < 2) {
             System.out.println("小孩数不能小于2个");
             return;
