@@ -14,6 +14,13 @@ public class ArrayStackDemo {
 
         stack.showStack();
         System.out.printf("top = %d\n", stack.pop());
+        System.out.printf("top = %d\n", stack.pop());
+        System.out.printf("top = %d\n", stack.pop());
+        System.out.printf("top = %d\n", stack.pop());
+        System.out.printf("top = %d\n", stack.pop());
+        System.out.printf("top = %d\n", stack.pop());
+        System.out.printf("top = %d\n", stack.pop());
+
 
     }
 }
@@ -36,9 +43,9 @@ class ArrayStack {
         return top == -1;
     }
 
-    public void showStack(){
-        for (int i = top; i >=0; i--) {
-            System.out.printf("stack[%d] = %d\n",i,stack[i]);
+    public void showStack() {
+        for (int i = top; i >= 0; i--) {
+            System.out.printf("stack[%d] = %d\n", i, stack[i]);
         }
     }
 
@@ -51,6 +58,9 @@ class ArrayStack {
     }
 
     public int pop() {
+        if (isEmpty()) {
+            throw new SysException(ExceptionEnum.ELEMENT_EMPTY);
+        }
         int result = stack[top];
         top--;
         return result;
