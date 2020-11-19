@@ -18,7 +18,7 @@ public class LinkedListStackDemo {
         System.out.printf("top = %d\n", stack.pop());
         System.out.printf("top = %d\n", stack.pop());
         System.out.printf("top = %d\n", stack.pop());
-//        System.out.printf("top = %d\n", stack.pop());
+        System.out.printf("top = %d\n", stack.pop());
 //        System.out.printf("top = %d\n", stack.pop());
     }
 }
