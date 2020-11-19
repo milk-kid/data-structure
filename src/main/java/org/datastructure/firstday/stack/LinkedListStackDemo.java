@@ -12,7 +12,7 @@ public class LinkedListStackDemo {
         stack.push(3);
         stack.push(4);
         stack.push(5);
-        stack.push(5);
+//        stack.push(5);
 
         stack.showStack();
         System.out.printf("top = %d\n", stack.pop());
