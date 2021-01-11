@@ -36,14 +36,14 @@ public class PolishNonation {
                 }
                 s1.pop();
             } else {
-                while(s1.size()>0&&Operation.value(s1.peek())>=Operation.value(str)){
-                     s2.add(s1.pop());
+                while (s1.size() > 0 && Operation.value(s1.peek()) >= Operation.value(str)) {
+                    s2.add(s1.pop());
                 }
                 s1.push(str);
             }
         }
 
-        while(s1.size()>0){
+        while (s1.size() > 0) {
             s2.add(s1.pop());
         }
 
