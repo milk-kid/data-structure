@@ -24,6 +24,7 @@ public class PolishNonation {
         List<String> suffix = toSuffixExpression(infix);
         System.out.println(suffix);
         System.out.println(calculate(suffix));
+        System.out.println();
 
     }
 
