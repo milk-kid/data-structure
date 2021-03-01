@@ -32,6 +32,7 @@ public class Queen8 {
             }
         }
 
+
         return true;
     }
 
