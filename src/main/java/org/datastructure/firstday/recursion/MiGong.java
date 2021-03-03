@@ -1,8 +1,5 @@
 package org.datastructure.firstday.recursion;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MiGong {
     public static void main(String[] args) {
         int[][] map = new int[8][7];
