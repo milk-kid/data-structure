@@ -25,9 +25,15 @@ public class Queen8 {
         }
     }
 
+    /**
+     *  //todo array[n] == array[i] 通过遍历array【i】来对比每列只有一个棋子
+     *  //todo n-i=每行距离，Math.abs(array[n]-array[i])每列的距离，当行和列相等时，就断定为对角线
+     * @param n = 行
+     * @return
+     */
     public boolean judge(int n) {
         for (int i = 0; i < n; i++) {
-            if (array[i] == array[n] || n - i == Math.abs(array[n] - array[i])) {
+            if (array[n] == array[i] || n - i == Math.abs(array[n] - array[i])) {
                 return false;
             }
         }
