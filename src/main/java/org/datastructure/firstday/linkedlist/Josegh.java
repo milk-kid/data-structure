@@ -4,7 +4,7 @@ package org.datastructure.firstday.linkedlist;
  * 约瑟夫环一共分四步
  * todo 第一步：需要辅助指针helper指向环形列表最后节点，也就是要出圈的后一个元素，帮助小孩出圈，first指向要出圈的元素
  * TODO 第二步：小孩报数前先让helper，first移动k-1次 到预定位置startNo
- * todo 第三步：当小孩报数时helper和first指针同时移动countNum - 1
+ * todo 第三步：当小孩报数时helper和first指针同时移动 1
  * todo 第四步：这时first指向的节点就是要出圈的小孩节点  出圈 first= first.getNext();  helper.setNext(first)
  */
 public class Josegh {
@@ -89,7 +89,7 @@ class CircleSingleLinkedList {
             if (helper == first) { //说明圈中只有一个节点
                 break;
             }
-            //todo 第三步：当小孩报数时helper和first指针同时移动countNum - 1
+            //todo 第三步：当小孩报数时helper和first指针同时移动1
             for (int i = 0; i < countNum - 1; i++) {
                 first = first.getNext();
                 helper = helper.getNext();
