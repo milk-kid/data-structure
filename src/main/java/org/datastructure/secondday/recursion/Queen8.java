@@ -1,6 +1,6 @@
 package org.datastructure.secondday.recursion;
 
-import jdk.internal.dynalink.beans.StaticClass;
+import java.lang.reflect.Array;
 
 public class Queen8 {
     private int max = 8;
