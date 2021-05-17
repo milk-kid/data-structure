@@ -7,7 +7,7 @@ import java.util.Date;
 public class SelectSort {
     public static void main(String[] args) {
 
-      //  int arr[] = {1, 4, 100, 2, -2};
+        //  int arr[] = {1, 4, 100, 2, -2};
         int[] arr = new int[8];
         for (int i = 0; i < 8; i++) {
             arr[i] = (int) (Math.random() * 800000);
@@ -32,9 +32,10 @@ public class SelectSort {
                     minIndex = j;
                 }
             }
-            arr[minIndex] = arr[i];
-            arr[i] = min;
-
+            if (min != arr[i]) {
+                arr[minIndex] = arr[i];
+                arr[i] = min;
+            }
         }
 
     }
