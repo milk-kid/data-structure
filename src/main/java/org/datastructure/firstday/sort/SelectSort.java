@@ -1,14 +1,15 @@
 package org.datastructure.firstday.sort;
 
-
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Date;
 
-public class BubbleSort {
+public class SelectSort {
     public static void main(String[] args) {
-        //int arr[] = {1, 4, 100, 2, -2};
-        int[] arr = new int[80000];
-        for (int i = 0; i < 80000; i++) {
+
+      //  int arr[] = {1, 4, 100, 2, -2};
+        int[] arr = new int[8];
+        for (int i = 0; i < 8; i++) {
             arr[i] = (int) (Math.random() * 800000);
         }
 
@@ -18,23 +19,23 @@ public class BubbleSort {
         sort(arr);
         Date t2 = new Date();
         System.out.println(df.format(t2));
+        System.out.println(Arrays.toString(arr));
     }
 
     private static void sort(int[] arr) {
-        int temp;
-        //TODO 元素相比次数=数组长度-1
         for (int i = 0; i < arr.length - 1; i++) {
-
-            //todo arr.length-1 =倒数第二个元素，arr[j+1]刚好是最后一个元素
-            for (int j = 0; j < arr.length - 1 - i; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+            int minIndex = i;
+            int min = arr[i];
+            for (int j = i + 1; j < arr.length; j++) {
+                if (min > arr[j]) {
+                    min = arr[j];
+                    minIndex = j;
                 }
             }
+            arr[minIndex] = arr[i];
+            arr[i] = min;
+
         }
+
     }
-
-
 }

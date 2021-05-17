@@ -1,8 +1,12 @@
 package org.example;
 
 
-import org.datastructure.firstday.linkedlist.LinkedListTest;
+
 import org.testng.annotations.Test;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Unit test for simple App.
@@ -10,12 +14,23 @@ import org.testng.annotations.Test;
 
 public class AppTest {
 
-
     @Test
-    public void test2(){
-        LinkedListTest listTest = new LinkedListTest();
+    public static void one(){
+        int arr[] = {1,2,1,2,4,5};
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < arr.length; i++) {
+            if(map.containsKey(arr[i])){
+                map.put(arr[i],map.get(arr[i])+1);
+            }else{
+                map.put(arr[i],1);
+            }
+        }
 
-        listTest.main(new String[]{"","",""});
-        System.out.println("test run pass");
+        Set<Map.Entry<Integer, Integer>> entries = map.entrySet();
+        for (Map.Entry entry:entries){
+            if(entry.getValue().equals(1)){
+                System.out.println(entry.getKey());
+            }
+        }
     }
 }
