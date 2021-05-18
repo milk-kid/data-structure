@@ -12,12 +12,16 @@ public class InsertSort {
             int insertIndex = i - 1;//最右边开始比较所以是当前元素下标-1
             int insertVal = arr[i];
 
+            //todo 当insertIndex >= 0 && insertVal < arr[insertIndex]时，说明没有找到位置
             while (insertIndex >= 0 && insertVal < arr[insertIndex]) {
                 arr[insertIndex + 1] = arr[insertIndex];
                 insertIndex--;
             }
 
-            //while中最后insertIndex-- 所以这里要+回来否则下表就会越界
+            /**
+             * insertIndex >= 0 && insertVal < arr[insertIndex] 不满足时，就是找到位置了，此时insertIndex通过+1，退回要插入的位置
+             */
+
             if (insertIndex + 1 != i) {
                 arr[insertIndex + 1] = insertVal;
 
