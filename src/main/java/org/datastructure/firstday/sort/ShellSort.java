@@ -6,18 +6,18 @@ import java.util.Date;
 public class ShellSort {
 
     public static void main(String[] args) {
-         int arr[] = new int[]{8, 9, 1, 7, 2, 3, 5, 4, 6, 0};
+         //int arr[] = new int[]{8, 9, 1, 7, 2, 3, 5, 4, 6, 0};
 
-//        int arr[] = new int[800000];
-//        for (int i = 0; i < 800000; i++) {
-//            arr[i] = (int) (Math.random() * 1000000);
-//        }
+        int arr[] = new int[8000000];
+        for (int i = 0; i < 8000000; i++) {
+            arr[i] = (int) (Math.random() * 1000000);
+        }
 
         Date t1 = new Date();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println(df.format(t1));
-        shellSort1(arr);
-//        shellSort2(arr);
+//        shellSort1(arr);
+        shellSort2(arr);
         Date t2 = new Date();
         System.out.println(df.format(t2));
 
@@ -73,10 +73,11 @@ public class ShellSort {
 
                 j = i;
                 temp = arr[i];
+                //todo 如果不满足第一次比较那么之后的比较不再进行，起始影响不大
                 if (arr[j] < arr[j - step]) {
                     while (j - step >= 0 && temp < arr[j - step]) {
-                        arr[j] = arr[j - step];
-                        j -= step;
+                        arr[j] = arr[j - step];//todo 将比较后小的元素复制到后一个元素位置
+                        j -= step;//todo 这时才指向较小元素的位置，如果不满足继续循环的条件，那么元素插入位置就是该位置
                     }
                     arr[j] = temp;
 
